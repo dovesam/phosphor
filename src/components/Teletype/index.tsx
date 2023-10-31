@@ -39,9 +39,11 @@ class Teletype extends Component<TeletypeProps, TeletypeState> {
 
         this._cursorInterval = props.speed || this._cursorInterval;
 
+        const startChar = ( props.speed == 0 ) ? props.text.length : 0;
+
         this.state = {
             index: 0,
-            char: 0,
+            char: startChar,
             active: false,
             done,
             paused,

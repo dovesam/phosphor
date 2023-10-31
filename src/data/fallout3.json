@@ -1,0 +1,186 @@
+{
+    "config": {
+        "name": "RobCo Industries",
+        "author": "@dovesam"
+    },
+    "screens": [
+        {
+            "id": "home",
+            "type": "screen",
+            "content": [
+                "ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM",
+                {
+                    "text": "COPYRIGHT 2075-2077 ROBCO INDUSTRIES",
+                    "type": "text",
+                    "speed": 100
+                },
+                "-Server 1-",
+                "=========================================",
+                "",
+                {
+                    "text": "> LOG IN",
+                    "type": "link",
+                    "target": "menu"
+                }
+            ]
+        },
+        {
+            "id": "menu",
+            "type": "screen",
+            "content": [
+                "ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM",
+                "COPYRIGHT 2075-2077 ROBCO INDUSTRIES",
+                "-Server 1-",
+                "",
+                "Peter Stevens, Technician Class 3",
+                "=========================================",
+                "",
+                {
+                    "type": "link",
+                    "text": "> Journal Entry 06A01",
+                    "target": [
+                        {
+                            "target": "corruptDialog",
+                            "type": "dialog",
+                            "shiftKey": false
+                        } 
+                    ]
+                },
+                {
+                    "type": "link",
+                    "target": "entry02",
+                    "text": "> Journal Entry 06A02"
+                },
+                {
+                    "type": "link",
+                    "text": "> Journal Entry 06A03",
+                    "target": [
+                        {
+                            "target": "corruptDialog",
+                            "type": "dialog",
+                            "shiftKey": false
+                        } 
+                    ]
+                },
+                {
+                    "type": "link",
+                    "text": "> Journal Entry 06A04",
+                    "target": [
+                        {
+                            "target": "corruptDialog",
+                            "type": "dialog",
+                            "shiftKey": false
+                        } 
+                    ]
+                },
+                {
+                    "type": "link",
+                    "text": "> Journal Entry 06A05",
+                    "target": "entry05"
+                },
+                {
+                    "type": "link",
+                    "text": "> Journal Entry 06A06",
+                    "target": [
+                        {
+                            "target": "corruptDialog",
+                            "type": "dialog",
+                            "shiftKey": false
+                        } 
+                    ]
+                },
+                {
+                    "type": "link",
+                    "text": "> Journal Entry 06A07",
+                    "target": "entry07"
+                }
+            ]
+        },
+        {
+            "id": "entry02",
+            "type": "screen",
+            "content": [
+                "Journal Entry:",
+                "",
+                "I don't know what to do. My Jason, my little boy... he's gone.",
+                "",
+                "My wife won't talk anymore. She just sits in this godforsaken sub-level and stares out of the window at the rock wall as if looking across a sunlit meadow or a lazy summertime lake.",
+                "",
+                "Jason was my life. He was my joy, my meaning. Now all this work seems pointless.",
+                "",
+                "This was a mistake. Better we had all died together outside than inside this permanent tomb.",
+                "",
+                "I'm scared.",
+                "",
+                {
+                    "type": "link",
+                    "text": "< BACK",
+                    "target": "menu"
+                }
+            ]
+        },
+        {
+            "id": "entry05",
+            "type": "screen",
+            "content": [
+                "Journal Entry:",
+                "",
+                "Nothing has meaning to me anymore.",
+                "",
+                "Every time I'm in the outer tunnels I swear I can hear children's laughter.",
+                "",
+                "The Vault doctors say its just my mind compensating for the loss of Jason but I know I'm not crazy. They gave me new pills but pills are for crazy people! I refuse to take these pills!",
+                "",
+                "I AM NOT CRAZY!",
+                "",
+                "Why bring up kids in a hellhole like this? Why? This is a pointless existence.",
+                "",
+                {
+                    "type": "link",
+                    "text": "< BACK",
+                    "target": "menu"
+                }
+            ]
+        },
+        {
+            "id": "entry07",
+            "type": "screen",
+            "content": [
+                "Journal Entry:",
+                "",
+                "Cantstandthesoundsanymore",
+                "                 takethepillstheysaywhytakethem",
+                "IAMNOTCRAZYIAMNOTCRAZYJasonslaughter-",
+                "nofamilygoneforever ",
+                "",
+                "stuckherefor evereternityend",
+                "",
+                "IamsaneIammeIamforever",
+                "",
+                {
+                    "type": "link",
+                    "text": "< BACK",
+                    "target": "menu"
+                }
+            ]
+        }
+    ],
+    "dialogs": [
+        {
+            "id": "corruptDialog",
+            "type": "alert",
+            "content": [
+                "Data corrupted."
+            ]
+        },
+        {
+            "id": "lockedDialog",
+            "type": "alert",
+            "content": [
+                "This is a locked link. You'll need to <shift>+click to activate it.",
+                "Press <enter>, <esc>, or click anywhere to close this dialog."
+            ]
+        }
+    ]
+
+}
