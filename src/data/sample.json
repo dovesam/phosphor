@@ -13,6 +13,9 @@
                 "Or it can be an empty string like the above entry.",
                 { "type": "text", "text": "Or it can be an Object with an specific CSS 'className' property, like 'alert', currently the only one.", "className": "alert" },
                 "",
+                { "type": "text", "text": "The 'speed' property controls the speed of the text animation.", "speed": 80 },
+                { "type": "text", "text": "Speed of 0 renders the text instantly.", "speed": 0 },
+                "",
                 "Links to other Screens can be rendered, too. Linking to the current screen's ID will cause it to redraw. Like this:",
                 {
                     "type": "link",

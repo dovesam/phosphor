@@ -9,7 +9,11 @@
             "type": "screen",
             "content": [
                 "ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM",
-                "COPYRIGHT 2075-2077 ROBCO INDUSTRIES",
+                {
+                    "text": "COPYRIGHT 2075-2077 ROBCO INDUSTRIES",
+                    "type": "text",
+                    "speed": 100
+                },
                 "-Server 1-",
                 "=========================================",
                 "",

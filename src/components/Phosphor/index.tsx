@@ -19,7 +19,7 @@ import Scanlines from "../Scanlines";
 
 // for different content, edit sample.json, or,
 // preferrably, create a new JSON and load it here
-import json from "../../data/fallout3.json";
+import json from "../../data/sample.json";
 
 interface AppState {
     screens: Screen[];
@@ -371,6 +371,7 @@ class Phosphor extends Component<any, AppState> {
                     id,
                     type: ScreenDataType.Text,
                     text: element.text,
+                    speed: element.speed,
                     className: element.className,
                     state,
                     onLoad,
@@ -444,10 +445,12 @@ class Phosphor extends Component<any, AppState> {
         ) {
             const text = type === ScreenDataType.Prompt ? element.prompt : element.text;
             const handleRendered = () => this._activateNextScreenData();
+            const speed = element.speed;
             return (
                 <Teletype
                     key={key}
                     text={text}
+                    speed={speed}
                     onComplete={handleRendered}
                     onNewLine={this._handleTeletypeNewLine}
                     autocomplete={false}
