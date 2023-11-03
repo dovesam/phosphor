@@ -79,6 +79,7 @@
                 "BACK",
                 "DIALOG",
                 "IMAGE",
+                "SCREEN",
                 {
                     "type": "prompt",
                     "prompt": "Enter command: ",
@@ -103,6 +104,13 @@
                             "action": {
                                 "type": "link",
                                 "target": "screen2"
+                            }
+                        },
+                        {
+                            "command": "screen",
+                            "action": {
+                                "type": "link",
+                                "target": "screen3"
                             }
                         }
                     ]
@@ -141,6 +149,24 @@
                 },
                 "\n",
                 "Note that as of 2020-06-12, the above blend-modes appear broken in Chrome, but work just fine in Firefox & Safari of all things.",
+                "",
+                {
+                    "type": "link",
+                    "target": "screen1",
+                    "text": "> BACK"
+                }
+            ]
+        },
+        {
+            "id": "screen3",
+            "type": "screen",
+            "speed": 100,
+            "content": [
+                "Using the 'speed' property on a screen entity changes the default text animation speed for all text in that screen",
+                { "type": "text", "text": "It can still be overriden for each text element if required", "speed": 20 },
+                "",
+                "This should be the same speed as the first line on this page",
+                "",
                 "",
                 {
                     "type": "link",

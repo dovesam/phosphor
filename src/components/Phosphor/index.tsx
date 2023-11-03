@@ -80,6 +80,7 @@ interface ScreenData {
 interface Screen {
     id: string;
     type: ScreenType;
+    speed: number;
     content: ScreenData[];
 }
 
@@ -252,6 +253,7 @@ class Phosphor extends Component<any, AppState> {
         // try to parse & build the screen
         const id = src.id || null;
         const type = this._getScreenType(src.type);
+        const speed = src.speed;
         const content = this._parseScreenContent(src.content).flat(); // flatten to one dimension
 
         // if this screen is invalid for any reason, skip it
@@ -262,6 +264,7 @@ class Phosphor extends Component<any, AppState> {
         return {
             id,
             type,
+            speed,
             content,
         };
     }
@@ -439,13 +442,16 @@ class Phosphor extends Component<any, AppState> {
     private _renderActiveElement(element: any, key: number): ReactElement {
         const type = element.type;
 
+        // Get the parent screen
+        const screen = this._getScreen(this.state.activeScreenId);
+
         // if the element is text-based, like text or Link, render instead a
         // teletype component
         if (type === ScreenDataType.Text || type === ScreenDataType.Link || type === ScreenDataType.Prompt
         ) {
             const text = type === ScreenDataType.Prompt ? element.prompt : element.text;
             const handleRendered = () => this._activateNextScreenData();
-            const speed = element.speed;
+            const speed = element.speed || screen.speed;
             return (
                 <Teletype
                     key={key}
