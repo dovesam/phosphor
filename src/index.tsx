@@ -1,12 +1,27 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Phosphor from "./components/Phosphor";
+import {
+    createBrowserRouter,
+    RouterProvider,
+  } from "react-router-dom";
 
 import * as serviceWorker from "./serviceWorker";
 
+const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Phosphor />,
+    },
+    {
+        path: "/admin",
+        element: <div>Admin page!</div>
+    }
+  ]);
+
 ReactDOM.render(
     <React.StrictMode>
-        <Phosphor />
+        <RouterProvider router={router} />
     </React.StrictMode>,
     document.getElementById("root")
 );
