@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Phosphor from "./components/Phosphor";
+import Admin from "./components/Admin";
 import {
     createBrowserRouter,
     RouterProvider,
@@ -15,7 +16,7 @@ const router = createBrowserRouter([
     },
     {
         path: "/admin",
-        element: <div>Admin page!</div>
+        element: <Admin />,
     }
   ]);
 

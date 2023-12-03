@@ -1,0 +1,27 @@
+@import "../../assets/sass/fonts";
+@import "../../assets/sass/colors";
+
+html, body {
+    font-family: $font-family;
+    font-size: $fontsize;
+    line-height: $lineheight;
+    color: $foreground;
+
+    user-select: none;
+    text-shadow: $foreground-glow;
+
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    background: $background;
+    background-image: $background-gradient;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+.admin {
+    padding: $lineheight;
+}
